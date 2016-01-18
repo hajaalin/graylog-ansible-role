@@ -159,3 +159,8 @@ graylog_collector_expiration_threshold: '14d'
 # graylog2-server / graylog2-web-interface
 graylog_install_server: true
 graylog_install_web_interface: true
+
+# DNS Resolver Plugin for Graylog
+graylog_plugin_dns_resolver_enabled: 'false'
+graylog_plugin_dns_resolver_run_before_extractors: 'true'
+graylog_plugin_dns_resolver_timeout: '2s'
