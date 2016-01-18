@@ -155,3 +155,7 @@ graylog_server_wrapper: ''
 # Collector
 graylog_collector_inactive_threshold: '1m'
 graylog_collector_expiration_threshold: '14d'
+
+# graylog2-server / graylog2-web-interface
+graylog_install_server: true
+graylog_install_web_interface: true

@@ -3,6 +3,12 @@
 - name: Install Graylog web UI
   apt: name=graylog-web state=present
 
+- name: Make sure group "graylog" exists
+  group: name=graylog state=present
+
+- name: Make sure user "graylog" exists
+  user: name=graylog state=present groups=graylog
+
 - name: Configure Graylog web
   template: src=graylog.web.conf.j2 dest=/etc/graylog/web/web.conf owner=graylog group=graylog mode=0644
   notify: restart graylog-web
