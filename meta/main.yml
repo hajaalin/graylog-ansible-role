@@ -1,14 +1,14 @@
 ---
-dependencies: []
-#  - { role: lesmyrmidons.mongodb }
-#  - { role: f500.elasticsearch }
-#  - { role: jdauphant.nginx }
+dependencies:
+  - { role: greendayonfire.mongodb, when: graylog_install_mongodb }
+  - { role: f500.elasticsearch, when: graylog_install_elasticsearch }
+  - { role: jdauphant.nginx, when: graylog_install_nginx }
 
 galaxy_info:
   author: Marius Sturm
   company: Graylog, Inc.
   description: "Install and configure Graylog log management."
-  min_ansible_version: 1.6
+  min_ansible_version: 2.0
   license: Apache 2
   platforms:
   - name: Ubuntu
