@@ -1,4 +1,9 @@
 ---
-- src: https://github.com/UnderGreen/ansible-role-mongodb
-- src: https://github.com/f500/ansible-elasticsearch
-- src: https://github.com/jdauphant/ansible-role-nginx
+
+- name: "elastic.elasticsearch"
+  src: "https://github.com/elastic/ansible-elasticsearch.git"
+  version: "master"
+
+- name: "jdauphant.nginx"
+  src: "https://github.com/jdauphant/ansible-role-nginx.git"
+  version: "v2.7.4"

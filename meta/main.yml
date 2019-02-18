@@ -1,22 +1,29 @@
 ---
+
 dependencies:
-  - { role: greendayonfire.mongodb, when: graylog_install_mongodb }
-  - { role: f500.elasticsearch, when: graylog_install_elasticsearch }
-  - { role: jdauphant.nginx, when: graylog_install_nginx }
+  - role: "elastic.elasticsearch"
+    when: graylog_install_elasticsearch
+
+  - role: "jdauphant.nginx"
+    when: graylog_install_nginx
 
 galaxy_info:
-  author: Marius Sturm
-  company: Graylog, Inc.
+  author: "Marius Sturm"
+  company: "Graylog, Inc."
   description: "Install and configure Graylog log management."
-  min_ansible_version: 2.0
-  license: Apache 2
+  min_ansible_version: "2.2"
+  license: "Apache 2"
   platforms:
-  - name: Ubuntu
-    versions:
-    - all
-  - name: Debian
-    versions:
-    - all
-  categories:
-  - monitoring
-  - system
+    - name: "Ubuntu"
+      versions:
+        - "xenial"
+        - "zesty"
+    - name: "Debian"
+      versions:
+        - "jessie"
+    - name: "EL"
+      versions:
+        - "7"
+  galaxy_tags:
+    - "monitoring"
+    - "system"
