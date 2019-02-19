@@ -146,18 +146,19 @@ graylog_proxied_requests_thread_pool_size: 32
 graylog_trusted_proxies:                   ""
 
 # Web UI
-graylog_web_enable:                  True
-graylog_web_listen_uri:              "http://0.0.0.0:9000/"
-graylog_web_endpoint_uri:            ""
-graylog_enable_cors:                 True
-graylog_enable_gzip:                 True
-graylog_web_enable_tls:              False
-graylog_web_tls_cert_file:           ""
-graylog_web_tls_key_file:            ""
-graylog_web_tls_key_password:        ""
-graylog_web_max_header_size:         8192
-graylog_web_max_initial_line_length: 4096
-graylog_web_thread_pool_size:        16
+graylog_http_enable:                  True
+#graylog_http_bind_address:            "http://127.0.0.1:9000"
+graylog_http_bind_address:            ""
+graylog_http_external_uri:            ""
+graylog_http_enable_cors:             True
+graylog_http_enable_gzip:             True
+graylog_http_enable_tls:              False
+graylog_http_tls_cert_file:           ""
+graylog_http_tls_key_file:            ""
+graylog_http_tls_key_password:        ""
+graylog_http_max_header_size:         8192
+graylog_http_max_initial_line_length: 4096
+graylog_http_thread_pool_size:        16
 
 # JVM
 graylog_gc_warning_threshold: "1s"
